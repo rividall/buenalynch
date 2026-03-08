@@ -6,15 +6,15 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
 
-# Copy source content and scripts
+# Copy source content and scripts (public/media/ is pre-optimized locally and SCP'd)
 COPY content/ content/
 COPY scripts/ scripts/
 COPY src/ src/
 COPY public/ public/
 COPY index.html tsconfig*.json vite.config.ts ./
 
-# Run prebuild (optimize images + build content) then build
-RUN npm run prebuild && npm run build
+# Build content metadata then Vite build (image optimization done locally)
+RUN npx tsx scripts/build-content.ts && npm run build
 
 # Stage 2: Serve
 FROM nginx:alpine
