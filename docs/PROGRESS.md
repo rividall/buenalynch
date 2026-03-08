@@ -93,8 +93,10 @@ Build plan for buenalynch.com portfolio. Each phase produces a runnable incremen
 ### Infrastructure
 - [x] Dockerize with multi-stage build (node:22-slim build, nginx:alpine serve)
 - [x] nginx.conf with gzip, asset caching, SPA fallback
-- [ ] docker-compose setup
-- [ ] Configure Cloudflare Tunnel to point at the container
+- [x] docker-compose setup (single service, port 80, restart unless-stopped)
+- [x] Configure Cloudflare Tunnel to point at the container
+- [x] Media gitignored — optimized locally, SCP'd to Pi, included in Docker build
+- [x] Site live at buenalynch.com
 
 ## Phase 3: Backend (if needed) **NOT STARTED**
 

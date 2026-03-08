@@ -2,7 +2,7 @@
 
 Deployment guide for buenalynch.com on a self-hosted Raspberry Pi.
 
-**Status:** Infrastructure ready, waiting for Dockerized site container
+**Status:** Live at buenalynch.com
 
 ---
 
@@ -152,7 +152,7 @@ Files created:
 - `Dockerfile` — Multi-stage build (node:22-slim for build, nginx:alpine for serve)
 - `docker-compose.yml` — Single service on port 80, restart unless-stopped
 - `nginx.conf` — Gzip, asset caching, SPA fallback (`try_files → /index.html`)
-- `.dockerignore` — Excludes node_modules, dist, generated files
+- `.dockerignore` — Excludes node_modules, dist
 
 ### Media deployment
 
@@ -166,8 +166,9 @@ Media files are **not in git** (too large). Images are optimized locally and SCP
 
 2. **SCP optimized images to the Pi:**
    ```bash
-   scp -r site/public/media/ mc@mc.local:~/repositories/buenalynch/buernalynch/site/public/media/
+   scp -r site/public/media/* mc@mc.local:~/repositories/buenalynch/buernalynch/site/public/media/
    ```
+   Note: use `/*` to copy contents, not the folder itself (avoids nested `media/media/`).
 
 3. Only re-SCP when media files change. The Docker build skips image optimization — it expects `public/media/` to already exist.
 
@@ -205,8 +206,8 @@ sudo docker compose down
 - [x] Create `Dockerfile` (multi-stage: node build, nginx serve)
 - [x] Create `docker-compose.yml`
 - [x] Create `nginx.conf` (gzip, caching, SPA fallback)
-- [ ] Build and run the container on the Pi
-- [ ] Verify tunnel routes traffic to the container
+- [x] Build and run the container on the Pi
+- [x] Verify tunnel routes traffic to the container
 - [ ] Set up systemd service for cloudflared
 
 ---
@@ -224,6 +225,20 @@ Fix: `sudo locale-gen en_GB.UTF-8 && sudo dpkg-reconfigure locales`
 ### cloudflared login hangs
 
 Leave the terminal open after opening the auth URL. It waits for the browser authorization callback. Don't close the terminal until it prints success.
+
+### Docker build produces empty image manifest (black screen, "fallback" undefined)
+
+The Dockerfile calls `tsc` + `vite build` directly instead of `npm run build`. This is because `npm run build` auto-triggers the `prebuild` lifecycle script, which runs `optimize-images.ts`. With no source images in the container (they're excluded), it overwrites `image-manifest.ts` with an empty object, causing HeroGrid to crash at runtime.
+
+**Fix:** Always use `npx tsc -b && npx vite build` in the Dockerfile, never `npm run build`.
+
+### SCP creates nested media/media/ folder
+
+When SCP'ing to a destination that already has the folder, use:
+```bash
+scp -r site/public/media/* mc@mc.local:~/repositories/buenalynch/buernalynch/site/public/media/
+```
+Note the `/*` to copy contents, not the folder itself.
 
 ### Tunnel runs but site unreachable
 
