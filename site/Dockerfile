@@ -14,7 +14,11 @@ COPY public/ public/
 COPY index.html tsconfig*.json vite.config.ts ./
 
 # Build content metadata then Vite build (image optimization done locally)
-RUN npx tsx scripts/build-content.ts && npm run build
+RUN npx tsx scripts/build-content.ts && \
+    echo "=== image-manifest.ts line count ===" && \
+    wc -l src/content/generated/image-manifest.ts && \
+    head -12 src/content/generated/image-manifest.ts && \
+    npm run build
 
 # Stage 2: Serve
 FROM nginx:alpine
