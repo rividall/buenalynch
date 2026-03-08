@@ -154,16 +154,31 @@ Files created:
 - `nginx.conf` — Gzip, asset caching, SPA fallback (`try_files → /index.html`)
 - `.dockerignore` — Excludes node_modules, dist, generated files
 
-### Build and run on the Pi
+### Media deployment
 
-Clone/copy the `site/` folder to the Pi, then:
+Media files are **not in git** (too large). Images are optimized locally and SCP'd to the Pi.
+
+1. **Optimize images locally** (from project root):
+   ```bash
+   cd site && npm run prebuild
+   ```
+   This generates optimized images in `site/public/media/`.
+
+2. **SCP optimized images to the Pi:**
+   ```bash
+   scp -r site/public/media/ mc@mc.local:~/repositories/buenalynch/buernalynch/site/public/media/
+   ```
+
+3. Only re-SCP when media files change. The Docker build skips image optimization — it expects `public/media/` to already exist.
+
+### Build and run on the Pi
 
 ```bash
 cd site
 sudo docker compose up -d --build
 ```
 
-First build will be slow (npm install + Sharp native compilation + image optimization). Subsequent builds use Docker layer caching.
+The Dockerfile runs `build-content.ts` (content metadata) + Vite build. Image optimization is skipped — handled locally.
 
 Verify:
 
@@ -176,6 +191,8 @@ curl http://localhost:80
 ```bash
 sudo docker compose up -d --build
 ```
+
+If media changed, re-run the SCP step above before building.
 
 ### Stop
 

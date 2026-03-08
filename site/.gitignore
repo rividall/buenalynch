@@ -18,6 +18,7 @@ src/content/generated/
 
 # Source media (SCP'd directly to server)
 content/media/
+!content/media/manifest.json
 
 # Editor directories and files
 .vscode/*
