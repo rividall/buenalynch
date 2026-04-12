@@ -1,6 +1,11 @@
+import { lazy, Suspense, useEffect, useRef } from 'react'
 import { Button } from '@/components/Button/Button'
 import { PageTransition } from '@/components/PageTransition/PageTransition'
 import styles from './About.module.css'
+
+const Dither = lazy(() =>
+  import('@/components/Dither/Dither').then(m => ({ default: m.Dither }))
+)
 
 const EDUCATION = [
   'Elisava School of Engineering and Design — Master in Engineering, 2024–2025',
@@ -9,9 +14,35 @@ const EDUCATION = [
 ]
 
 export function About() {
+  const ditherRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (ditherRef.current) {
+        ditherRef.current.style.transform = `translateY(${-window.scrollY * 0.15}px)`
+      }
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <PageTransition>
     <div className={styles.page}>
+      <Suspense fallback={null}>
+        <div ref={ditherRef} style={{ position: 'fixed', inset: 0, top: '-10%', height: '120%', zIndex: -1, willChange: 'transform' }}>
+          <Dither
+            waveColor={[0.1, 0, 0.2]}
+            disableAnimation={false}
+            enableMouseInteraction
+            mouseRadius={0.1}
+            colorNum={9.7}
+            waveAmplitude={0.44}
+            waveFrequency={2.3}
+            waveSpeed={0.01}
+          />
+        </div>
+      </Suspense>
       <h1>About me</h1>
       <div className={styles.layout}>
         <div>
