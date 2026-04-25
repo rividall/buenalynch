@@ -2,8 +2,9 @@
 title: "OutThink's Website"
 slug: "outthinkwebsite"
 date: "2025-01-22 10:06:50"
+featured: true
 featuredImage: "./media/ot1rvidal-es.jpg"
-categories: ["Visual Design"]
+categories: ["Software"]
 ---
 
 # OutThink's Website

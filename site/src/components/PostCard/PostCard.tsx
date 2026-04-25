@@ -8,13 +8,32 @@ interface Props {
 }
 
 export function PostCard({ post }: Props) {
-  return (
-    <Link to={`/projects/${post.slug}`} className={styles.card}>
+  const isExternal = post.externalUrl?.startsWith('http')
+  const inner = (
+    <>
       {post.featuredImage && (
         <OptimizedImage image={post.featuredImage} className={styles.image} />
       )}
       <h3 className={styles.title} dangerouslySetInnerHTML={{ __html: post.title }} />
       <p className={styles.excerpt}>{post.excerpt}</p>
+    </>
+  )
+
+  if (post.externalUrl) {
+    return (
+      <a
+        href={post.externalUrl}
+        className={styles.card}
+        {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+      >
+        {inner}
+      </a>
+    )
+  }
+
+  return (
+    <Link to={`/projects/${post.slug}`} className={styles.card}>
+      {inner}
     </Link>
   )
 }

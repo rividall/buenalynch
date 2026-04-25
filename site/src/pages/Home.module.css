@@ -1,6 +1,7 @@
 .intro {
   padding: 0 15%;
-  margin-top: var(--section-gap);
+  margin-top: 144px;
+  margin-bottom: 144px;
   text-align: center;
 }
 

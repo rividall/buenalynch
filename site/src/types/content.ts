@@ -15,6 +15,8 @@ export interface Post {
   featuredImage: ImageAsset | null
   contentHtml: string
   excerpt: string
+  featured: boolean
+  externalUrl?: string
 }
 
 export interface Category {

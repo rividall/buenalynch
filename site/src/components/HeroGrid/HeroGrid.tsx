@@ -26,9 +26,9 @@ function heroImage(manifestKey: string, alt: string): ImageAsset {
 }
 
 const HERO_CATEGORIES = [
-  { slug: 'projects', name: 'Projects', image: heroImage('futbowl/02-buenalynch.jpeg', 'Projects') },
+  { slug: 'hardware', name: 'Hardware', image: heroImage('futbowl/02-buenalynch.jpeg', 'Hardware') },
   { slug: 'academy', name: 'Academy', image: heroImage('robotina-no-code-textile-electronics/00-cover.png', 'Academy') },
-  { slug: 'visual-design', name: 'Visual Design', image: heroImage('fim/14-part2.png', 'Visual Design') },
+  { slug: 'software', name: 'Software', image: heroImage('fim/14-part2.png', 'Software') },
 ]
 
 export function HeroGrid() {

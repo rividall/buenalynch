@@ -1,9 +1,10 @@
 ---
 title: "FIM"
 slug: "fim"
-date: "2023-04-20 00:04:45"
+date: "2023-04-24 00:00:11"
+featured: true
 featuredImage: "./media/image-2.png"
-categories: ["Academy", "Projects", "Tech"]
+categories: ["Academy", "Hardware"]
 ---
 
 # FIM

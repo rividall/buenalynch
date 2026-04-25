@@ -1,4 +1,12 @@
 {
+  "cowork-guide": [
+    {
+      "original": "claude.png",
+      "new": "cowork-guide/00-cover.png",
+      "role": "cover",
+      "sourceUrl": "claude.png"
+    }
+  ],
   "futbowl": [
     {
       "original": "2023-04_82008881_622145635186965_8475678746710376448_n.jpg",

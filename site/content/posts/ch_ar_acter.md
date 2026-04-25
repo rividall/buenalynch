@@ -2,8 +2,9 @@
 title: "Ch_AR_acter: Augmented Reality for Character Design"
 slug: "ch_ar_acter"
 date: "2023-04-24 00:09:37"
+featured: true
 featuredImage: "./media/image-13.png"
-categories: ["Academy", "Projects", "Visual Design"]
+categories: ["Academy", "Software"]
 tags: ["Ar", "augmented reality"]
 ---
 

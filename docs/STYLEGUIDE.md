@@ -84,7 +84,7 @@ Can be loaded via Google Fonts CDN or self-hosted (download from Google Fonts, p
 - Black background, no border
 - Logo (SVG icon `<L>` + "Ricardo Vidal Lynch") left-aligned
 - Nav links right-aligned: "Projects v", "About me", "Blog"
-- "Projects" has a dropdown chevron for category sub-nav
+- "Projects" has a dropdown chevron for category sub-nav (Hardware, Academy, Software, Hobby)
 - No hamburger visible in screenshots, but mobile will need one
 
 ### Hero / Category Banners (home page)
@@ -93,9 +93,9 @@ Can be loaded via Google Fonts CDN or self-hosted (download from Google Fonts, p
 - Images at 80% opacity for text readability
 - Images are tall, roughly 3:4 ratio (16:9 on mobile)
 - No border radius, edge-to-edge within grid
-- Hardcoded images: futbowl (Projects), robotina (Academy), fim (Visual Design)
+- Hardcoded images: futbowl (Hardware), robotina (Academy), fim (Software)
 
-### Project Cards (home page "Selected Projects")
+### Project Cards (home page "All projects")
 - Three-column grid
 - Image on top (no border radius)
 - Title below image (semibold, white)

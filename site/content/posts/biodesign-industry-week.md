@@ -2,6 +2,7 @@
 title: "Biodesign &amp; Industry week"
 slug: "biodesign-industry-week"
 date: "2024-01-14 11:25:40"
+featured: true
 featuredImage: "./media/biodesign-industry-week7.jpg"
 categories: ["Academy"]
 ---

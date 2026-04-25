@@ -1,9 +1,9 @@
 ---
 title: "Painting"
 slug: "painting"
-date: "2023-04-24 00:00:11"
+date: "2023-04-20 00:04:45"
 featuredImage: "./media/screen-shot-2023-04-19-at-23.00.44.png"
-categories: ["Visual Design"]
+categories: ["Hobby"]
 ---
 
 # Painting

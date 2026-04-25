@@ -3,7 +3,7 @@ title: "Ecosofia: Environmental monitoring in Patagonia"
 slug: "ecosofia-environmental-monitoring-in-patagonia"
 date: "2023-04-23 23:37:28"
 featuredImage: "./media/firefly_photofrom-the-distance-you-can-see-a-small-solar-powered-environmental-measuring-antena-with-a-macbook-in-patagonia_art_82344si.jpg"
-categories: ["Projects", "Tech"]
+categories: ["Hardware", "Hobby"]
 ---
 
 # Ecosofia: Environmental monitoring in Patagonia

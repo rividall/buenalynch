@@ -4,9 +4,10 @@ import { Logo } from '@/components/Logo'
 import styles from './Nav.module.css'
 
 const PROJECT_CATEGORIES = [
+  { slug: 'hardware', name: 'Hardware' },
   { slug: 'academy', name: 'Academy' },
-  { slug: 'tech', name: 'Tech' },
-  { slug: 'visual-design', name: 'Visual Design' },
+  { slug: 'software', name: 'Software' },
+  { slug: 'hobby', name: 'Hobby' },
 ]
 
 export function Nav() {
@@ -42,9 +43,6 @@ export function Nav() {
           </NavLink>
           {dropdownOpen && (
             <div className={styles.dropdownMenu}>
-              <Link to="/projects" className={styles.dropdownItem}>
-                All Projects
-              </Link>
               {PROJECT_CATEGORIES.map(cat => (
                 <Link
                   key={cat.slug}

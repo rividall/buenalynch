@@ -29,6 +29,7 @@ uniform vec3 waveColor;
 uniform vec2 mousePos;
 uniform int enableMouseInteraction;
 uniform float mouseRadius;
+uniform float scrollOffset;
 
 vec4 mod289(vec4 x) { return x - floor(x * (1.0/289.0)) * 289.0; }
 vec4 permute(vec4 x) { return mod289(((x * 34.0) + 1.0) * x); }
@@ -85,10 +86,12 @@ void main() {
   vec2 uv = gl_FragCoord.xy / resolution.xy;
   uv -= 0.5;
   uv.x *= resolution.x / resolution.y;
+  uv.y -= scrollOffset;
   float f = pattern(uv);
   if (enableMouseInteraction == 1) {
     vec2 mouseNDC = (mousePos / resolution - 0.5) * vec2(1.0, -1.0);
     mouseNDC.x *= resolution.x / resolution.y;
+    mouseNDC.y -= scrollOffset;
     float dist = length(uv - mouseNDC);
     float effect = 1.0 - smoothstep(0.0, mouseRadius, dist);
     f -= 0.5 * effect;
@@ -211,6 +214,7 @@ function DitheredWaves({
     mousePos: new THREE.Uniform(new THREE.Vector2(0, 0)),
     enableMouseInteraction: new THREE.Uniform(enableMouseInteraction ? 1 : 0),
     mouseRadius: new THREE.Uniform(mouseRadius),
+    scrollOffset: new THREE.Uniform(0),
   })
 
   useEffect(() => {
@@ -222,6 +226,14 @@ function DitheredWaves({
       res.set(w, h)
     }
   }, [size, gl])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      waveUniformsRef.current.scrollOffset.value = window.scrollY * 0.15 / window.innerHeight
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   useEffect(() => {
     if (!enableMouseInteraction) return

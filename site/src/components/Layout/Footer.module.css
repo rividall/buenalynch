@@ -1,28 +1,38 @@
 .footer {
-  background: var(--color-surface);
+  background: transparent;
   padding: 64px var(--page-padding-desktop);
   margin-top: var(--section-gap);
+  position: relative;
+  z-index: 1;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1fr 1fr;
+  gap: 96px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .columnTitle {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--color-text);
   margin-bottom: 16px;
 }
 
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
 .tagline {
-  color: var(--color-text-muted);
-  font-size: 14px;
+  color: var(--color-text);
+  font-size: 16px;
   margin-top: 12px;
+  text-decoration: underline;
 }
 
 .logoLink {
@@ -31,7 +41,8 @@
   gap: 8px;
   text-decoration: none;
   color: var(--color-text);
-  font-size: 14px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .logoIcon {
@@ -47,8 +58,8 @@
 
 .socialLink {
   color: var(--color-text);
-  text-decoration: none;
-  font-size: 14px;
+  text-decoration: underline;
+  font-size: 16px;
 }
 
 .contactInfo {
@@ -57,21 +68,6 @@
   line-height: 1.8;
 }
 
-.sitemapLinks {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.sitemapLink {
-  color: var(--color-text-muted);
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.sitemapLink:hover {
-  color: var(--color-text);
-}
 
 @media (max-width: 767px) {
   .footer {

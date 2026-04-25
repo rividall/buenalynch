@@ -3,7 +3,7 @@ title: "Futbowl"
 slug: "futbowl"
 date: "2023-04-19 21:59:22"
 featuredImage: "./media/82008881_622145635186965_8475678746710376448_n.jpg"
-categories: ["Projects", "Tech"]
+categories: ["Hardware"]
 ---
 
 # Futbowl

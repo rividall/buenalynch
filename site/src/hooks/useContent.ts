@@ -29,8 +29,12 @@ export function getAllCategories(): Category[] {
 
 export function getProjectPosts(): Post[] {
   return posts.filter(p =>
-    p.categories.some(c => ['Projects', 'Tech', 'Visual Design', 'Academy'].includes(c))
+    p.categories.some(c => ['Hardware', 'Hobby', 'Software', 'Academy'].includes(c))
   )
+}
+
+export function getFeaturedPosts(): Post[] {
+  return posts.filter(p => p.featured)
 }
 
 export function getRecentPosts(count = 6): Post[] {

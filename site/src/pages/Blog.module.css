@@ -33,11 +33,23 @@
   min-width: 120px;
 }
 
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .title {
   font-size: 18px;
   font-weight: 600;
   color: var(--color-text);
   transition: opacity 0.2s;
+}
+
+.excerpt {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
 }
 
 @media (max-width: 767px) {

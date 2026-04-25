@@ -3,6 +3,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: var(--card-gap);
   padding: 0 var(--page-padding-desktop);
+  margin-top: 48px;
 }
 
 .cell {
@@ -13,6 +14,7 @@
 .cellLink {
   display: block;
   text-decoration: none;
+  background: var(--color-bg);
 }
 
 .cell:hover .image {

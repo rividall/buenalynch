@@ -167,6 +167,8 @@ async function processPost(filePath: string) {
     featuredImage,
     contentHtml,
     excerpt: generateExcerpt(content),
+    featured: (data.featured as boolean) || false,
+    externalUrl: (data.externalUrl as string) || undefined,
   }
 }
 

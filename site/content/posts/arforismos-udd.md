@@ -2,8 +2,9 @@
 title: "ARforismos UDD"
 slug: "arforismos-udd"
 date: "2023-04-24 01:06:04"
+featured: true
 featuredImage: "./media/captura-de-pantalla-2023-04-24-a-las-01.04.15.png"
-categories: ["Academy", "Projects", "Visual Design"]
+categories: ["Academy", "Software"]
 tags: ["Ar", "augmented reality"]
 ---
 

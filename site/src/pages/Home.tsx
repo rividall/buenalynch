@@ -3,11 +3,11 @@ import { ProjectCard } from '@/components/ProjectCard/ProjectCard'
 import { PostCard } from '@/components/PostCard/PostCard'
 import { Button } from '@/components/Button/Button'
 import { PageTransition } from '@/components/PageTransition/PageTransition'
-import { getProjectPosts, getRecentPosts } from '@/hooks/useContent'
+import { getFeaturedPosts, getRecentPosts } from '@/hooks/useContent'
 import styles from './Home.module.css'
 
 export function Home() {
-  const projects = getProjectPosts().slice(0, 6)
+  const projects = getFeaturedPosts()
   const recent = getRecentPosts(6)
 
   return (

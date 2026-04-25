@@ -27,27 +27,39 @@ export const pages: PageData[] = [
     "contentHtml": "<h1>Contact</h1>\n"
   },
   {
+    "slug": "hardware",
+    "title": "Hardware",
+    "date": "2023-04-19 22:18:32",
+    "contentHtml": "<h1>Hardware</h1>\n"
+  },
+  {
+    "slug": "hobby",
+    "title": "Hobby",
+    "date": "2023-04-23 22:16:02",
+    "contentHtml": "<h1>Hobby</h1>\n"
+  },
+  {
     "slug": "home",
     "title": "",
     "date": "2023-04-23 18:56:29",
     "contentHtml": "<h1></h1>\n"
   },
   {
+    "slug": "personal",
+    "title": "Personal projects",
+    "date": "2026-04-22 00:00:00",
+    "contentHtml": "<h1>Personal projects</h1>\n"
+  },
+  {
     "slug": "projects",
-    "title": "Projects",
+    "title": "All projects",
     "date": "2023-04-19 22:18:32",
-    "contentHtml": "<h1>Projects</h1>\n"
+    "contentHtml": "<h1>All projects</h1>\n"
   },
   {
-    "slug": "technology",
-    "title": "Technology",
-    "date": "2023-04-23 22:16:02",
-    "contentHtml": "<h1>Technology</h1>\n"
-  },
-  {
-    "slug": "vd",
-    "title": "Visual Design",
+    "slug": "software",
+    "title": "Software",
     "date": "2023-04-23 22:18:16",
-    "contentHtml": "<h1>Visual Design</h1>\n"
+    "contentHtml": "<h1>Software</h1>\n"
   }
 ]

@@ -48,8 +48,8 @@ Build plan for buenalynch.com portfolio. Each phase produces a runnable incremen
 - [x] `Button` — Outline style, supports `<Link>` or `<a>`
 
 ### Pages Built
-- [x] Home — HeroGrid + intro section + Selected Projects + Recent Posts
-- [x] Projects — Full project grid
+- [x] Home — HeroGrid + intro section + All projects + Recent Posts
+- [x] Projects — "All projects" umbrella grid (Hardware + Academy + Software + Hobby)
 - [x] CategoryPage — Filtered project list by category (large title)
 - [x] ProjectDetail — Featured image + prose content (h1 dedup, YouTube embeds)
 - [x] Blog — Post listing

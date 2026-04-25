@@ -2,8 +2,9 @@
 title: "Robotina: No-code textile electronics"
 slug: "robotina-no-code-textile-electronics"
 date: "2024-01-14 14:16:01"
+featured: true
 featuredImage: "./media/image-3.png"
-categories: ["Academy", "Sin categoría", "Tech"]
+categories: ["Academy", "Hardware"]
 ---
 
 # Robotina: No-code textile electronics

@@ -1,17 +1,17 @@
 import { ProjectCard } from '@/components/ProjectCard/ProjectCard'
 import { PageTransition } from '@/components/PageTransition/PageTransition'
-import { getProjectPosts } from '@/hooks/useContent'
+import { posts } from '@/content/generated/posts'
 import styles from './Projects.module.css'
 
-export function Projects() {
-  const projects = getProjectPosts()
+export function Personal() {
+  const personal = posts.filter(p => p.categories.includes('Personal projects'))
 
   return (
     <PageTransition>
     <div className={styles.page}>
-      <h1>All projects</h1>
+      <h1>Personal projects</h1>
       <div className={styles.grid}>
-        {projects.map(post => (
+        {personal.map(post => (
           <ProjectCard key={post.slug} post={post} />
         ))}
       </div>

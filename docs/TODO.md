@@ -9,6 +9,7 @@ Whenever visiting this page to look for info on how to perform a task, remember 
 
 ## Pending
 
+- [ ] **[Section] Surface Personal projects** — Category, page, and route exist (`/personal`, `Personal.tsx`, `personal.md`) but intentionally not linked from Nav, Footer, or HeroGrid. Decide where it belongs (separate hero tile? About-page link? secret URL?) and wire it up.
 - [ ] **[SEO] Open Graph + structured data** — Meta tags for social sharing, JSON-LD for search engines
 - [ ] **[i18n] Multilingual EN/ES** — Content exists in both languages, needs routing and switcher
 - [ ] **[Feature] Contact form** — Third-party service or custom backend endpoint

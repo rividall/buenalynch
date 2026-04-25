@@ -4,41 +4,34 @@
     "slug": "academy",
     "name": "Academy",
     "parent": "",
-    "description": "Academic projects for the Design and Engineering schools"
+    "description": "Academic projects, Teaching."
   },
   {
     "id": 273,
     "slug": "blog",
     "name": "Blog",
     "parent": "",
-    "description": ""
+    "description": "Stuff i write sometimes."
   },
   {
     "id": 2008,
-    "slug": "projects",
-    "name": "Projects",
+    "slug": "hardware",
+    "name": "Hardware",
     "parent": "",
-    "description": ""
-  },
-  {
-    "id": 1771,
-    "slug": "sin-categoria",
-    "name": "Sin categoría",
-    "parent": "",
-    "description": ""
+    "description": "Electronics mostly."
   },
   {
     "id": 318,
-    "slug": "tech",
-    "name": "Tech",
+    "slug": "hobby",
+    "name": "Hobby",
     "parent": "",
-    "description": ""
+    "description": "Personal apps, home server, side experiments"
   },
   {
     "id": 13747,
-    "slug": "visual-design",
-    "name": "Visual Design",
+    "slug": "software",
+    "name": "Software",
     "parent": "",
-    "description": ""
+    "description": "UX, Web, Apps."
   }
 ]
