@@ -20,8 +20,8 @@ export function Footer() {
             <a href="https://www.linkedin.com/in/ricardo-vidal-lynch-318b4621a/" className={styles.socialLink} target="_blank" rel="noopener noreferrer">
               LinkedIn
             </a>
-            <a href="https://www.instagram.com/buena_lynch/" className={styles.socialLink} target="_blank" rel="noopener noreferrer">
-              Instagram
+            <a href="https://github.com/rividall" className={styles.socialLink} target="_blank" rel="noopener noreferrer">
+              GitHub
             </a>
             <a href="https://www.youtube.com/@buenalynch" className={styles.socialLink} target="_blank" rel="noopener noreferrer">
               YouTube
