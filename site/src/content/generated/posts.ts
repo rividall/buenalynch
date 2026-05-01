@@ -3,6 +3,26 @@ import type { Post } from '@/types/content'
 
 export const posts: Post[] = [
   {
+    "slug": "dev-protocol-guide",
+    "title": "The Lynch Protocol — A Documentation-First Dev Framework for Claude Code",
+    "date": "2026-05-01 00:00:00",
+    "categories": [
+      "Blog"
+    ],
+    "tags": [],
+    "featuredImage": {
+      "fallback": "/media/cowork-guide/00-cover.png",
+      "srcSet": "/media/cowork-guide/00-cover-400w.webp 400w, /media/cowork-guide/00-cover-800w.webp 800w, /media/cowork-guide/00-cover-1200w.webp 1200w",
+      "alt": "The Lynch Protocol — A Documentation-First Dev Framework for Claude Code",
+      "width": 1262,
+      "height": 1166
+    },
+    "contentHtml": "<p>A documentation-first development framework for working effectively with Claude Code.</p>\n",
+    "excerpt": "A documentation-first development framework for working effectively with Claude Code.",
+    "featured": false,
+    "externalUrl": "/dev-protocol-guide"
+  },
+  {
     "slug": "arduino-checklist",
     "title": "Arduino Troubleshooting Checklist",
     "date": "2026-03-01 00:00:00",

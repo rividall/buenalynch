@@ -9,6 +9,7 @@ import { Blog } from '@/pages/Blog'
 import { CategoryPage } from '@/pages/CategoryPage'
 import { Contact } from '@/pages/Contact'
 import { CoworkGuide } from '@/pages/CoworkGuide'
+import { DevProtocolGuide } from '@/pages/DevProtocolGuide'
 import { ArduinoChecklist } from '@/pages/ArduinoChecklist'
 import { NotFound } from '@/pages/NotFound'
 
@@ -26,6 +27,7 @@ export function App() {
           <Route path="blog/:slug" element={<ProjectDetail />} />
           <Route path="category/:slug" element={<CategoryPage />} />
           <Route path="cowork-guide" element={<CoworkGuide />} />
+          <Route path="dev-protocol-guide" element={<DevProtocolGuide />} />
           <Route path="arduino-checklist" element={<ArduinoChecklist />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
